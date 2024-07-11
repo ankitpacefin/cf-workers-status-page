@@ -1,6 +1,6 @@
 settings:
-  title: 'Leonardo Benicio Status Page'
-  url: 'https://status.lbenicio.dev' # used for Slack messages
+  title: 'Pocketful Status Page'
+  url: 'https://www.pocketful.in/' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -15,55 +15,109 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: lbenicio-main # unique identifier
-    name: lbenicio.dev
-    description: 'Personal website.' # default=empty
-    url: 'https://lbenicio.dev/' # URL to fetch
+  - id: httpswwwpocketfulin # unique identifier
+    name: Pocteful Home
+    description: 'Pocteful Home status of last 90 days' # default=empty
+    url: 'https://www.pocketful.in/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
-  - id: lbenicio-blog
-    name: blog.lbenicio.dev
-    description: 'Personal blog.'
-    url: 'https://blog.lbenicio.dev'
+  - id: pocketful-blog
+    name: Pocketful Blog
+    description: 'Status Page For Pocketful Blog'
+    url: 'https://www.pocketful.in/blog/'
     method: GET
     expectStatus: 200
     followRedirect: true
     linkable: true
 
-  - id: lbenicio-link
-    name: link.lbenicio.dev
-    description: 'URL shortner service.'
-    url: 'https://link.lbenicio.dev'
+  - id: tools-pages
+    name: Tools Pages
+    description: 'Status Page For Pocketful Tools'
+    url: 'https://www.pocketful.in/tools'
     method: GET
     expectStatus: 200
     followRedirect: true
     linkable: true
 
-  - id: lbenicio-pgp
-    name: pgp.lbenicio.dev
-    description: 'Pgp key server.'
-    url: 'https://pgp.lbenicio.dev'
+  - id: calculators-page
+    name: Calculators Page
+    description: 'Status Page For Pocketful Tools'
+    url: 'https://www.pocketful.in/calculators'
     method: GET
     expectStatus: 200
     followRedirect: true
     linkable: true
 
-  - id: lbenicio-socials
-    name: socials.lbenicio.dev
-    description: 'socials links repository.'
-    url: 'https://socials.lbenicio.dev'
+  - id: stcoks-page
+    name: Stcoks Page
+    description: 'Status Page For Pocketful Stcoks'
+    url: 'https://www.pocketful.in/stocks'
     method: GET
     expectStatus: 200
     followRedirect: true
     linkable: true
 
-  - id: lbenicio-public
-    name: public.lbenicio.dev
-    description: 'public repository.'
-    url: 'https://public.lbenicio.dev'
+  - id: home-waitlist-api
+    name: Home Waitlist APi
+    description: 'Status Page For Pocketful Home Page Waitlist APi'
+    url: 'https://www.pocketful.in/landing-util/v2/waitlists'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: ipo-api
+    name: IPO APi
+    description: 'Status Page For Pocketful IPO Api'
+    url: 'https://dev-trade.pocketful.in/api/open-apis/tradeipo/getAllIpo'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: listed-companies-api
+    name: Listed Companies APi
+    description: 'Status Page For Pocketful Listed Companies APi'
+    url: 'https://dev-trade.pocketful.in/api/open-apis/company/names?page=1'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: fii-dii-api
+    name: FII DII API
+    description: 'Status Page For Pocketful Corporate Actions APi'
+    url: 'https://dev-trade.pocketful.in/api/open-apis/nse/fiidiiTradeReact'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: stocks-faq-api
+    name: Stocks FAQ API
+    description: 'Status Page For Pocketful Stocks FAQ APi'
+    url: 'https://dev-trade.pocketful.in/api/open-apis/company/overview?isin=INE748C01038'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: bulk-deals-api
+    name: Bulk Deals APi
+    description: 'Status Page For Pocketful Bulk Deals APi'
+    url: 'https://dev-trade.pocketful.in/api/open-apis/corporateActions/bulkdeals?from=2024-07-04&page=1&startWith='
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: what-if-api
+    name: What IF API
+    description: 'Status Page For Pocketful What If APi'
+    url: 'https://dev-trade.pocketful.in/api/open-apis/company/logos'
     method: GET
     expectStatus: 200
     followRedirect: true
